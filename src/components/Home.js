@@ -7,7 +7,7 @@ export default function Home({stranica, setStranica}) {
     <div className="kontenjer">
       <h2 className="podnaslov">Igrice: </h2>
       <div className="karticaIgre">
-        <a className="link" onClick={() => { setStranica("breakout") }}>
+        <div className="link link2" onClick={() => { setStranica("breakout") }}>
           <img
             className="slika"
             src={gameLogoBreakout}
@@ -15,10 +15,10 @@ export default function Home({stranica, setStranica}) {
           />{" "}
           <br />
           <span className="podnaslov"></span>BREAKOUT
-        </a>
+        </div>
       </div>
       <div className="karticaIgre">
-        <a className="link" onClick={() => { setStranica("2048") }}>
+        <div className="link link2" onClick={() => { setStranica("2048") }}>
           <img
             className="slika"
             src={gameLogo2048}
@@ -26,7 +26,7 @@ export default function Home({stranica, setStranica}) {
           />{" "}
           <br />
           <span className="podnaslov"></span>2048
-        </a>
+        </div>
       </div>
       <footer className="futer">
         <p>

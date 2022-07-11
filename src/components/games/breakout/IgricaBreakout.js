@@ -1,12 +1,19 @@
 import React from "react";
 import Board from "./Board";
 
-export default function IgricaBreakout({stranica, setStranica}) {
+export default function IgricaBreakout({ stranica, setStranica }) {
   return (
-    <div style={{color: "white"}}>
+    <div style={{ color: "white" }}>
       <Board />
       <br />
-      ← <a className="link" onClick={() => { setStranica("home") }}>Home</a>
+      <div
+        className="link link2"
+        onClick={() => {
+          setStranica("home");
+        }}
+      >
+        ← Home
+      </div>
       <footer className="futer">
         <p>
           <span>

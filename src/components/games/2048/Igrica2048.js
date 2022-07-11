@@ -8,7 +8,7 @@ import GameOverlay from "./GameOverlay";
 import "../../../main.scss";
 import "../../../styles.scss";
 
-const Igrica2048 = ({stranica, setStranica}) => {
+const Igrica2048 = ({ stranica, setStranica }) => {
   const [board, setBoard] = useState(new Board());
 
   const handleKeyDown = (event) => {
@@ -67,10 +67,14 @@ const Igrica2048 = ({stranica, setStranica}) => {
       </div>
       <br />
       <div style={{ color: "white" }}>
-        ←{" "}
-        <a className="link" onClick={() => { setStranica("home") }}>
-          Home
-        </a>
+        <div
+          className="link link2"
+          onClick={() => {
+            setStranica("home");
+          }}
+        >
+          ← Home
+        </div>
       </div>
       <footer className="futer">
         <p>
