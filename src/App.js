@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Link,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import IgricaBreakout from "./components/games/breakout/IgricaBreakout";
+import Igrica2048 from "./components/games/2048/Igrica2048";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/breakout" element={<IgricaBreakout />} />
+          {/*<Route path="/korisnik" element={
+            localStorage.getItem('korisnik') ? <HomeKorisnik tema={tema1} setTema={setTema1}  /> : <Navigate to="/" />
+          }/>*/}
+          <Route
+            path="/2048"
+            element={
+              <>
+                <Igrica2048 />
+                <br />
+              </>
+            }
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
