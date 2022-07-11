@@ -1,4 +1,4 @@
-Play these games ONLINE, right now, for free:
+Play these games ONLINE, right now:
 https://smajic07-igrice-breakout-i-2048.netlify.app/
 
 # Getting Started with Create React App
