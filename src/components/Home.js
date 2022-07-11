@@ -2,12 +2,12 @@ import React from "react";
 import gameLogoBreakout from "../pictures/breakout.jpg";
 import gameLogo2048 from "../pictures/2048.jpg";
 
-export default function Home() {
+export default function Home({stranica, setStranica}) {
   return (
     <div className="kontenjer">
       <h2 className="podnaslov">Igrice: </h2>
       <div className="karticaIgre">
-        <a className="link" href="/breakout">
+        <a className="link" onClick={() => { setStranica("breakout") }}>
           <img
             className="slika"
             src={gameLogoBreakout}
@@ -18,7 +18,7 @@ export default function Home() {
         </a>
       </div>
       <div className="karticaIgre">
-        <a className="link" href="/2048">
+        <a className="link" onClick={() => { setStranica("2048") }}>
           <img
             className="slika"
             src={gameLogo2048}

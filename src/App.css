@@ -44,3 +44,7 @@ html{
   margin-top: 20px;
   color: white;
 }
+
+a:hover {
+  cursor: pointer;
+}
